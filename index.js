@@ -7,11 +7,10 @@ const content = core.getInput('root_dir', { default: ''});
 (
     async () => {
         try {
-            core.notice("Action!");
             await recursive(content, ['!*.php*']).then(
                 files => {
                     for(i = 0; i < files.length; i+=1) {
-                        core.info(`file ${files[i]} found`);
+                        core.setFailed(`${files[i]} that contains PHP code has been found. Please keep away from PHP code as it is harmful to your mental health`);
                     }
                 }
             );
