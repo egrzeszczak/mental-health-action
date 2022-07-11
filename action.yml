@@ -1,0 +1,9 @@
+name: 'Mental health influence action'
+author: 'egrzeszczak'
+description: 'This action checks if this repository will have a positive impact on developer's mental health'
+runs:
+  using: node16
+  main: index.js
+branding:
+  icon: 'smile'
+  color: 'green'
